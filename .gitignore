@@ -3,3 +3,9 @@
 /.idea
 /db.sqlite3
 .idea/
+
+# Ignore Python cache files everywhere in the project
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
