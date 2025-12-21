@@ -60,6 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'locallibrary.urls'
+SESSION_SAVE_EVERY_REQUEST = True
 
 TEMPLATES = [
     {
