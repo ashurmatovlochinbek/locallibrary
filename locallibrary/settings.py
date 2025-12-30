@@ -61,11 +61,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'locallibrary.urls'
 SESSION_SAVE_EVERY_REQUEST = True
+LOGIN_REDIRECT_URL = '/'
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -144,5 +146,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EMailBackend'
